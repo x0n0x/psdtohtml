@@ -1,0 +1,19 @@
+login: &login
+  adapter: mysql
+  host: localhost
+  encoding: utf8
+  username: root
+  password: toor
+  
+
+development:
+  database: PSDtoHTML_dev
+  <<: *login
+
+test:
+  database: PSDtoHTML_tests
+  <<: *login
+
+production:
+  database: PSDtoHTML
+  <<: *login
